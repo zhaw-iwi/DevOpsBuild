@@ -15,8 +15,8 @@ public class App {
         System.out.println(new App().getGreeting());
 
         InternetDomainName owner =
-        InternetDomainName.from("blog.overops.com").topPrivateDomain(); // returns takipi.com
-        boolean valid = InternetDomainName.isValid("takipi.monsters");
+        InternetDomainName.from("devops.zhaw.ch").topPrivateDomain(); // returns zhaw.ch
+        boolean valid = InternetDomainName.isValid("takipi.monsters"); // return false
 
         System.out.println(owner.toString());
         System.out.println("valid:" + valid);
