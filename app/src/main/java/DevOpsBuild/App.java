@@ -16,9 +16,10 @@ public class App {
 
         InternetDomainName owner =
         InternetDomainName.from("blog.overops.com").topPrivateDomain(); // returns takipi.com
-        InternetDomainName.isValid("takipi.monsters");
+        boolean valid = InternetDomainName.isValid("takipi.monsters");
 
         System.out.println(owner.toString());
+        System.out.println("valid:" + valid);
 
 
         String graph = ASCIIGraph.fromSeries(new double[] { 1.0, 2.0, 3.0, 10.0, 7.0, 9.0, 5.0, 4.0 }).plot();  
