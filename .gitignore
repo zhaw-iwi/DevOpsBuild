@@ -1,19 +1,5 @@
-/.gradle/
-/bin/
-target
+# Ignore Gradle project-specific cache directory
+.gradle
 
-*.class
-/generated/
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-!gradle-wrapper.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Ignore Gradle build output directory
 build

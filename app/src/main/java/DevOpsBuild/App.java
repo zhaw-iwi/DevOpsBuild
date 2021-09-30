@@ -3,8 +3,11 @@
  */
 package DevOpsBuild;
 
-import com.google.common.net.InternetDomainName;
-import com.mitchtalmadge.asciidata.graph.ASCIIGraph;
+import com.indvd00m.ascii.render.Render;
+import com.indvd00m.ascii.render.api.ICanvas;
+import com.indvd00m.ascii.render.api.IContextBuilder;
+import com.indvd00m.ascii.render.api.IRender;
+import com.indvd00m.ascii.render.elements.PseudoText;
 
 public class App {
     public String getGreeting() {
@@ -14,15 +17,14 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-        InternetDomainName owner =
-        InternetDomainName.from("devops.zhaw.ch").topPrivateDomain(); // returns zhaw.ch
-        boolean valid = InternetDomainName.isValid("takipi.monsters"); // return false
+        // Ascii Render Example
+        IRender render = new Render();
+		IContextBuilder builder = render.newBuilder();
+		builder.width(120).height(20);
+		builder.element(new PseudoText("DevOps"));
+		ICanvas canvas = render.render(builder.build());
+		String s = canvas.getText();
+		System.out.println(s);
 
-        System.out.println(owner.toString());
-        System.out.println("valid:" + valid);
-
-
-        String graph = ASCIIGraph.fromSeries(new double[] { 1.0, 2.0, 3.0, 10.0, 7.0, 9.0, 5.0, 4.0 }).plot();  
-        System.out.println(graph);
     }
 }
