@@ -26,6 +26,7 @@ dependencies {
 
     // added by mosa (build.gradle)
     implementation 'com.indvd00m.ascii.render:ascii-render:2.2.0'
+    implementation 'org.apache.pdfbox:pdfbox:3.0.1'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -37,7 +38,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'b.App'
+    mainClass = 'test.App'
 }
 
 tasks.named('test') {
